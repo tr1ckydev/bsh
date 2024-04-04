@@ -20,5 +20,8 @@
   "homepage": "https://github.com/tr1ckydev/bsh#readme",
   "devDependencies": {
     "@types/bun": "latest"
+  },
+  "prettier": {
+    "tabWidth": 4
   }
 }
