@@ -1,0 +1,24 @@
+{
+  "name": "@tr1ckydev/bsh",
+  "version": "0.0.3",
+  "description": "Run bun shell as a standalone interactive shell.",
+  "main": "index.ts",
+  "bin": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tr1ckydev/bsh.git"
+  },
+  "keywords": [
+    "bun",
+    "shell"
+  ],
+  "author": "tr1ckydev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tr1ckydev/bsh/issues"
+  },
+  "homepage": "https://github.com/tr1ckydev/bsh#readme",
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
