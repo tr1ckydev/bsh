@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-
+import { createInterface } from "readline/promises";
 switch (Bun.argv[2]) {
     case "--version":
         console.log("bsh:", (await import("./package.json")).version);
@@ -11,18 +11,22 @@ switch (Bun.argv[2]) {
         await Bun.$`${{ raw: command }}`.nothrow();
         break;
     case undefined:
-        while (true) {
-            const command = prompt("\x1b[32m$\x1b[0m");
-            if (!command) continue;
+        const rl = createInterface({
+            input: process.stdin,
+            output: process.stdout,
+            prompt: "\x1b[32m$\x1b[0m ",
+        });
+        rl.prompt();
+        rl.on("line", async command => {
             try {
-                await Bun.$`${{ raw: command.trimEnd() }}`.nothrow();
+                await Bun.$`${{ raw: command }}`.nothrow();
             } catch (err) {
                 console.error("error:", (err as Error).message);
-                continue;
             } finally {
-                console.write("\n");
+                rl.prompt();
             }
-        }
+        });
+        break;
     default:
         throw "unknown flag: " + Bun.argv[2];
 }
