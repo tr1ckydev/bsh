@@ -1,6 +1,6 @@
 {
   "name": "@tr1ckydev/bsh",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Run bun shell as a standalone interactive shell.",
   "main": "index.ts",
   "bin": "index.ts",

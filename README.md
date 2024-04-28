@@ -12,8 +12,11 @@ bunx @tr1ckydev/bsh
 
 ### Commands
 
-> [!CAUTION]  
+> [!CAUTION] 
 > Many commands are under development and might not work as expected. If you find any issue report them in Bun's GitHub repository.
+
+> [!TIP] 
+> Use up/down arrow keys to navigate command history.
 
 The following bash commands are available natively in bun shell.
 
@@ -54,7 +57,6 @@ The following bash commands are available natively in bun shell.
 ### Known issues
 
 - Using `cd` or other commands don't affect the next commands in the same session due to this [issue](https://github.com/oven-sh/bun/issues/9893).
-- Command history doesn't work with `prompt` but works with `readline` on linux which behaves weirdly on windows.
 
 This is an experimental project! File an issue if you find bugs and weird behaviours.
 
