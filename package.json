@@ -1,9 +1,15 @@
 {
   "name": "@tr1ckydev/bsh",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Run bun shell as a standalone interactive shell.",
-  "main": "index.ts",
-  "bin": "index.ts",
+  "main": "src/index.ts",
+  "bin": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "bsh": "bun src/index.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tr1ckydev/bsh.git"
