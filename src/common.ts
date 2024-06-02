@@ -22,16 +22,12 @@ export function rl() {
 
       const codeNumber = parseInt(code);
 
-      process.exit(Number.isNaN(codeNumber) ? 0 : codeNumber);
+      process.exit(isNaN(codeNumber) ? 0 : codeNumber);
     }
 
-    try {
-      await Bun.$`${{ raw: comm }}`.nothrow();
-    } catch (err) {
-      console.error("error:", (err as Error).message);
-    } finally {
-      rl.prompt();
-    }
+    await Bun.$`${{ raw: comm }}`.nothrow();
+
+    rl.prompt();
   });
 
   return rl;
