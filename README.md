@@ -40,6 +40,7 @@ The following bash commands are available natively in bun shell.
 | `seq`      | Print a sequence of numbers.                        |
 | `dirname`  | Strip last component from a path.                   |
 | `basename` | Print last component from a path.                   |
+| `cp`       | Copy files and directories.                         |
 
 ...and all other commands available globally in the system.
 
@@ -54,11 +55,15 @@ The following bash commands are available natively in bun shell.
   bunx @tr1ckydev/bsh -c "pwd"
   ```
 
+### Shell scripts
+
+`.sh` files work as usual cross-platform and are executed through the bun shell interpreter.
+
 ### Known issues
 
 - Using `cd` or other commands don't affect the next commands in the same session due to this [issue](https://github.com/oven-sh/bun/issues/9893).
 
-This is an experimental project! File an issue if you find bugs and weird behaviours.
+This is an experimental project! File an issue if you find a bug or any weird behavior.
 
 
 
